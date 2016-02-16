@@ -3,6 +3,7 @@
 
 body {
 	overflow-x: hidden;
+	color: @brand-primary;
 }
 
 p {
@@ -28,6 +29,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
+.font-lighter {
+	color: #519548;
+}
+.font-lightest {
+	color: #88c425;
+}
+
 hr.star-light,
 hr.star-primary {
     padding: 0;
@@ -40,7 +48,7 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f069";
     font-family: FontAwesome;
     display: inline-block;
     position: relative;
@@ -50,21 +58,21 @@ hr.star-primary:after {
 }
 
 hr.star-light {
-    border-color: white;
+    border-color: @brand-primary;
 }
 
 hr.star-light:after {
-    background-color: @brand-success;
-    color: white;
+    background-color: @brand-grey;
+    color: @brand-primary;
 }
 
 hr.star-primary {
-    border-color: @brand-primary;
+    /*border-color: @brand-primary;*/
 }
 
 hr.star-primary:after {
     background-color: white;
-    color: @brand-primary;
+    /*color: @brand-primary;*/
 }
 
 .img-centered {
@@ -73,15 +81,15 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background: @brand-success;
-	color: white;
+	background: white;
+	/*color: @brand-primary;*/
 	.container {
 		padding-top: 100px;
 		padding-bottom: 50px;
 	}
 	img {
 		display: block;
-		margin: 0 auto 20px;
+		margin: 0 auto 40px;
 	}
 	.intro-text {
 		.name {
@@ -102,7 +110,7 @@ header {
 	header {
 		.container {
 			padding-top: 200px;
-			padding-bottom: 100px;
+			padding-bottom: 80px;
 		}
 		.intro-text {
 			.name {
@@ -117,7 +125,7 @@ header {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
+        padding: 10px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
         transition: padding 0.3s;
@@ -126,20 +134,25 @@ header {
 	        -webkit-transition: all 0.3s;
 	        -moz-transition: all 0.3s;
 	        transition: all 0.3s;
+	        padding: 15px 0px;
 	    }
     }
     .navbar-fixed-top.navbar-shrink {
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
+	        padding: 15px 0px;
 	    }
 	}
 }
 
 .navbar {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-weight: 700;
+	a:hover {
+		color: @brand-success;
+	}
 	a:focus {
 		outline: none;
 	}
@@ -153,13 +166,24 @@ header {
 	}
 }
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-header a.navbar-brand:hover, .navbar-header a.navbar-brand:focus {
+	color: @brand-success;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: @brand-dark;
+	border-radius: 5px;
+}
+
 .navbar-default,
 .navbar-inverse {
 	border: none;
+	background-color: @brand-primary;
 }
 
 section {
     padding: 100px 0;
+    border-top: 2px dashed @brand-primary;
     h2 {
     	margin: 0;
     	font-size: 3em;
@@ -167,8 +191,8 @@ section {
 }
 
 section.success {
-	background: @brand-success;
-	color: white;
+	background: @brand-grey;
+	/*color: #777;*/
 
     a,
     a:hover,
@@ -244,7 +268,7 @@ section.success {
 }
 
 .btn-outline {
-	color: white;
+	color: @brand-primary;
 	font-size: 20px;
 	border: solid 2px white;
 	background: transparent;
@@ -309,7 +333,7 @@ section.success {
 
 .floating-label-form-group-with-focus {
 	label {
-	    color: @brand-success;
+	    color: @brand-primary;
 	}
 }
 
@@ -318,28 +342,36 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-	color: white;
+	/*color: white;*/
 	h3 {
 		margin-bottom: 30px;
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @brand-primary;
+		background-color: @brand-grey;
+		border-top: 2px dashed @brand-primary;
+		/*color: @brand-dark;*/
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@brand-primary, 5%);
+		background-color: @brand-primary;
+		color: white;
 	}
+}
+
+.btn-success {
+	background-color: @brand-primary;
+	border-color: @brand-primary;
 }
 
 .btn-social {
 	display: inline-block;
 	height: 50px;
 	width: 50px;
-	border: 2px solid white;
+	border: 2px solid @brand-primary;
 	border-radius: 100%;
 	text-align: center;
 	font-size: 20px;
