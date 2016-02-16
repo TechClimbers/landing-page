@@ -177,7 +177,7 @@ section.success a:hover,
 section.success a:focus,
 section.success a:active,
 section.success a.active {
-  color: #1b676b;
+  color: #88c425;
   outline: none;
 }
 @media (max-width: 767px) {
