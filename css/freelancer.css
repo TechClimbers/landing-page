@@ -270,6 +270,7 @@ section.success a.active {
   background: none;
   box-shadow: none !important;
   resize: none;
+  width: 100%;
 }
 .floating-label-form-group label {
   display: block;
@@ -324,6 +325,7 @@ footer .footer-below {
 .btn-success {
   background-color: #1b676b;
   border-color: #1b676b;
+  margin-top: 20px;
 }
 .btn-social {
   display: inline-block;
