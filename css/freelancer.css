@@ -342,6 +342,11 @@ footer .footer-below {
 .btn.active {
   outline: none;
 }
+
+.indicates-required {
+  margin-bottom: 20px;
+}
+
 .scroll-top {
   position: fixed;
   right: 2%;
