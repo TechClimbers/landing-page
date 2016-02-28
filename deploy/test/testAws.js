@@ -1,5 +1,5 @@
 var chai = require('chai');
-chai.should();
+var should = chai.should();
 chai.use(require('chai-things'));
 
 var AWS = require('aws-sdk');
@@ -31,4 +31,15 @@ describe('aws test', function() {
     });
   });
 
+  it('should create a temporary bucket for testing', function(done) {
+    var bucketName = "myTestBucket.techclimbers.com";
+    var s3 = new AWS.S3();
+    s3.createBucket({Bucket: bucketName}, function(err, data) {
+      should.not.exist(err);
+      s3.deleteBucket({Bucket: bucketName}, function(err, data) {
+        should.not.exist(err);
+        done();
+      });
+    });
+  });
 });
