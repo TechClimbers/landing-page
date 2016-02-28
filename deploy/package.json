@@ -1,0 +1,21 @@
+{
+  "name": "deploy-landing-page",
+  "version": "1.0.0",
+  "description": "Lambda function for deploying the TechClimbers landing page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "author": "Ricky Hussmann",
+  "repository": "https://github.com/TechClimbers/landing-page",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.2.39",
+    "nodegit": "^0.11.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-things": "^0.2.0",
+    "mocha": "^2.4.5"
+  }
+}
